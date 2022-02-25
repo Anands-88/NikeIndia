@@ -1,0 +1,34 @@
+<%- include("../html", {title: "Nike Signin", cssLink: "/CSS/sign_in.css"})%>
+<div id = "login_box">
+    <div>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fdownload%2Fblack%2Fnike-512.jpg&f=1&nofb=1" alt="">
+    </div>
+    <h3>YOUR ACCOUNT FOR EVERYTHING NIKE</h3>
+    <script>
+      let message = "<%=message%>"
+        if(message != "[object Object]")
+        {   
+            alert(message)
+        }
+    </script>
+    <form action="/users/signin"  method="post">
+        <div id = "login_form">
+            <input type="email" id = "email" placeholder="Email address" name="email" value="">
+            <input type="password" id = "password" placeholder="Password" name="password" value="">
+        </div>
+        <div id = "tick_box">
+            <input type="checkbox" name="" id="">
+            <p>Keep me signed in</p>
+        </div>
+        <div id = "nike_terms">
+            <p>By logging in, you agree to Nike's <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&country=IN&language=en&mobileStatus=false&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Privacy Policy</a>
+                and 
+                <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=IN&language=en&mobileStatus=true&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Terms of Use.</a></p>
+        </div>
+        <button id = "sign_in" name="Submit">SIGN IN</button>
+        <p>Not a Member?<a href="/users/register"> Join us.</a></p>
+    </form>
+</div>
+<div id = "customise_footer"></div>  
+</body>
+</html>
