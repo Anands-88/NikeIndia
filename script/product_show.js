@@ -1,84 +1,3 @@
-
-    var product = JSON.parse(localStorage.getItem("product"));
-
-    var cart_data = JSON.parse(localStorage.getItem("cart")) || [];
-                console.log(cart_data);
-
-    var wishlist_data = JSON.parse(localStorage.getItem("wishlist")) || [];
-
-    showProduct(product);
-
-    function showProduct({catprod, desprod, imageprod, priceprod, titleprod}){
-        var body= document.querySelector("#Product_show_main_div");
-            body.innerHTML = null;
-
-        var image = document.createElement("img");
-            image.setAttribute("src", imageprod);
-            image.setAttribute("id", "product_show_image");
-
-        var div = document.createElement("div");
-            div.setAttribute("id", "product_show_div")
-
-        var title = document.createElement("h1");
-            title.innerText = titleprod;
-            title.id = "product_show_title"
-
-        var price = document.createElement("h3");
-            price.innerText = "₹ "+priceprod;
-            price.id = "product_show_price";
-
-        var tax = document.createElement("p");
-            tax.innerText = "(Incl. of taxes and duties)";
-            tax.id = "product_show_tax";
-
-        var addcart = document.createElement("button");
-            addcart.textContent = "Add to cart";
-            addcart.id = "product_show_add_to_cart_button";
-            addcart.addEventListener("click", function(event){
-                event.preventDefault();
-                var obj = {
-                    prodtitle: titleprod,
-                    prodcat: catprod,
-                    proddes: desprod,
-                    prodimg: imageprod,
-                    prodprice: priceprod,
-                }
-                cart_data.push(obj);
-                localStorage.setItem("cart", JSON.stringify(cart_data));
-            })
-
-        var wishlist = document.createElement("button");
-            wishlist.textContent = "Favourite";
-            wishlist.id = "product_show_wishlist_button";
-            wishlist.addEventListener("click", function(event){
-                event.preventDefault();
-
-                var obj = {
-                    prodtitle: titleprod,
-                    prodcat: catprod,
-                    proddes: desprod,
-                    prodimg: imageprod,
-                    prodprice: priceprod,
-                }
-
-                wishlist_data.push(obj);
-                localStorage.setItem("wishlist", JSON.stringify(wishlist_data));
-            })
-
-        var br = document.createElement("br")
-            
-
-        var description = document.createElement("p");
-            description.innerText = desprod;
-            description.id = "product_show_description";
-
-        document.title = titleprod+", Nike IN";
-
-        div.append(title, price, tax, addcart, br, wishlist, description);
-
-        body.append(image, div);
-    }
-
     var similarProduct = [
         {
             prodtitle: "Nike Air Zoom Alphafly NEXT% Flyknit Ekiden",
@@ -181,7 +100,7 @@
         console.log("product index:", p1, p2, p3);
 
         var pdata =[];
-
+console.log(pdata)
         pdata.push(similarProduct[p1]);
         pdata.push(similarProduct[p2]);
         pdata.push(similarProduct[p3]);
@@ -203,7 +122,6 @@
                 price.innerText = "₹ "+prodprice;
 
             div.append(image, title, price);
-
             body.append(div);
         })
     };

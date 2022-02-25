@@ -37,6 +37,11 @@ body{
     cursor: pointer;
     /* border: 1px solid red; */
     align-items: center;
+    margin-left: 6%;
+    /* margin-right: 10%; */
+}
+#men_cloth_container > div >img{
+    height: 485px;
     /* margin-right: 10%; */
 }
 #men_wishlist_container{
