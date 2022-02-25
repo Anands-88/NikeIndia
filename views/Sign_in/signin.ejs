@@ -1,4 +1,5 @@
-<%- include("../html", {title: "Nike Signin", cssLink: "/CSS/sign_in.css"})%>
+<%- include("../html", {title: "Nike Signin", signLink:"/CSS/sign_in.css", footer:"/CSS/footer.css"})%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <div id = "login_box">
     <div>
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fdownload%2Fblack%2Fnike-512.jpg&f=1&nofb=1" alt="">
@@ -13,8 +14,9 @@
     </script>
     <form action="/users/signin"  method="post">
         <div id = "login_form">
-            <input type="email" id = "email" placeholder="Email address" name="email" value="">
-            <input type="password" id = "password" placeholder="Password" name="password" value="">
+            <input type="email" id = "email" placeholder="Email address" name="email" autocomplete="off">
+            <input type="password" id = "password" placeholder="Password" name="password" autocomplete="off">
+            <i class="far fa-eye" id="togglePassword"></i>
         </div>
         <div id = "tick_box">
             <input type="checkbox" name="" id="">
@@ -32,3 +34,19 @@
 <div id = "customise_footer"></div>  
 </body>
 </html>
+<script type = "module">
+    import footer from "/Javascript/footer.js"
+    let footer_html = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_html  
+
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+</script>

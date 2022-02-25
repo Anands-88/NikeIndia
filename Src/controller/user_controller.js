@@ -46,7 +46,7 @@ router.post("/register", body("email").isEmail()
                             .custom(async value => {
                                 const user = await User.findOne({ email: value });
                                 if (user) {
-                                    return Promise.reject('E-mail already in use');
+                                    return Promise.reject('Email already in use');
                                 }
                             }),
                         body('password').isLength({ min: 8 }).withMessage("Password must be length 8 characters"),

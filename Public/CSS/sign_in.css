@@ -46,7 +46,7 @@
     height: 45px;
     width: 94%;
     text-align: start;
-    margin-top: 4%;
+    margin-top: 2%;
   }
   
   #tick_box > input {
@@ -102,10 +102,33 @@
   #sign_in + p > a {
     color: black;
   }
+
+  /* eye toggle*/
+ #togglePassword{
+  margin-left: -30px;
+  cursor: pointer;
+  transform: translate(160px,-33px);
+}
+
+#password{
+  margin-left: 6px;
+}
+
   
   @media only screen and (min-width: 415px) and (max-width: 820px) {
     #login_box {
       width: 70%;
+    }
+
+    /* eye toggle*/
+    #togglePassword{
+      margin-left: -30px;
+      cursor: pointer;
+      transform: translate(0,0px);
+    }
+
+    #password{
+      margin-left:-6px;
     }
   }
   
@@ -113,6 +136,17 @@
     #login_box {
       width: 90%;
       margin-bottom: 35%;
+    }
+
+     /* eye toggle*/
+     #togglePassword{
+      margin-left: -30px;
+      cursor: pointer;
+      transform: translate(0,0px);
+    }
+
+    #password{
+      margin-left:-6px;
     }
   }
   

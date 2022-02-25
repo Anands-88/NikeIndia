@@ -128,7 +128,17 @@
   #join_us + p > a {
     color: black;
   }
-  
+/* eye toggle*/
+ #togglePassword{
+  margin-left: -30px;
+  cursor: pointer;
+  transform: translateX(320px);
+}
+
+#password{
+  margin-left: 6px;
+}
+
   @media screen and (min-width: 415px) and (max-width: 820px) {
     #signup_box {
       width: 60%;

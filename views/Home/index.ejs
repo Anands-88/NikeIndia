@@ -1,4 +1,19 @@
-<%- include("../html", {title: "Nike Home", cssLink: ""})%>
+<%- include("../html", {title: "Nike Home", signLink:"", footer:"/CSS/footer.css"})%>
     <h1 style = "color: orangered; text-align: center; font-size: 28;">Hello <%=message%></h1>
+
+    <script>
+        let message = "<%=message%>"
+          if(message != "[object Object]")
+          {   
+              alert(message)
+          }
+      </script>
+    <div id = "customise_footer"></div>  
 </body>
 </html>
+<script type = "module">
+    import footer from "/Javascript/footer.js"
+    let footer_html = footer()
+    console.log(footer_html)
+    document.querySelector("#customise_footer").innerHTML = footer_html  
+</script>
