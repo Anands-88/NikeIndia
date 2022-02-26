@@ -9,18 +9,25 @@ const womenclothController = require("./src/controllers/nikeWomenCloth.controlle
 const kidsshoesController = require("./src/controllers/nikeKidsShoes.controller")
 const kidsclothController = require("./src/controllers/nikekidsCloths.controller")
 const saleController = require("./src/controllers/nikesales.Controller")
+const sneakersFeedController = require("./src/controllers/sneakersFeed.controller")
+const sneakersUpcomingController = require("./src/controllers/sneakersUpcoming.controller")
+const sneakersInStockController = require("./src/controllers/sneakersInStock.controller")
 const cartController = require("./src/controllers/cart.controller")
 
 app.use(cors())
 
 app.use(express.json())
-app.use("/menShoes",menshoesController)
+app.use("/menShoes",menshoesController) 
 app.use("/menCloth",menclothController)
 app.use("/womenShoes",womenshoeController)
 app.use("/womenCloth",womenclothController)
 app.use("/kidsShoes",kidsshoesController)
 app.use("/kidsCloth",kidsclothController)
+app.use("/sneakersUpcoming",sneakersUpcomingController)
 app.use("/sale",saleController)
+app.use("/sneakerFeed",sneakersFeedController)
+app.use("/sneakersInStock",sneakersInStockController)
+
 app.use("/cart",cartController)
 
 
