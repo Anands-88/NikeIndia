@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
-    <link rel="stylesheet" href="../style/product_show.css">
+    <link rel="stylesheet" href="product_show.css">
     <link rel="stylesheet" href="../style/footer.css">
     <link rel="stylesheet" href="../style/navbar.css">
     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
@@ -114,107 +114,4 @@
 
 <script src="./script/navbar.js"></script>
 
-<!-- <script src="./script/product_show.js"></script> -->
-<script>
-     var product = JSON.parse(localStorage.getItem("product")) 
-    var cart_data = JSON.parse(localStorage.getItem("cart")) || []
-    // console.log("product",product)
-    var wishlist_data =  []
-    console.log(product)
-    // console.log(wishlist_data)
-    showProduct(product);
-
-function showProduct({product_name, product_category, product_image, product_price,product_description}){
-    var body= document.querySelector("#Product_show_main_div");
-        body.innerHTML = null;
-
-    var image1 = document.createElement("img");
-        image1.setAttribute("src", product_image[0]);
-        image1.setAttribute("id", "product_show_image");
-
-        var image2 = document.createElement("img");
-        image2.setAttribute("src", product_image[1]);
-        image2.setAttribute("id", "product_show_image");
-
-        var image3 = document.createElement("img");
-        image3.setAttribute("src", product_image[2]);
-        image3.setAttribute("id", "product_show_image");
-
-    var div = document.createElement("div");
-        div.setAttribute("id", "product_show_div")
-
-    var title = document.createElement("h1");
-        title.innerText = product_name;
-        title.id = "product_show_title"
-
-    var price = document.createElement("h3");
-        price.innerText = "₹ "+product_price;
-        price.id = "product_show_price";
-
-    var tax = document.createElement("p");
-        tax.innerText = "(Incl. of taxes and duties)";
-        tax.id = "product_show_tax";
-
-    var addcart = document.createElement("button");
-        addcart.textContent = "Add to cart";
-        addcart.id = "product_show_add_to_cart_button";
-
-        addcart.addEventListener("click", function(){
-            myCart(product)    
-
-        })
-
-    var wishlist = document.createElement("button");
-        wishlist.textContent = "Favourite";
-        wishlist.id = "product_show_wishlist_button";
-        wishlist.addEventListener("click", function(event){
-            event.preventDefault();
-            var obj = {
-                prodtitle: product_name,
-                prodcat: product_category,
-                proddes: product_description,
-                prodimg: product_image,
-                prodprice: product_price,
-            }
-            wishlist_data.push(obj);
-            console.log(obj)
-            localStorage.setItem("wishlist", JSON.stringify(wishlist_data));
-        })
-    var br = document.createElement("br")  
-    var description = document.createElement("p");
-        description.innerText = product_description;
-        description.id = "product_show_description";
-
-    document.title = product_name+", Nike IN";
-
-    div.append(title, price, tax, addcart, br, wishlist, description);
-
-    body.append(image1,div);
-}
-
-async function myCart(elem){
-    console.log("elem",elem)
-    try{
-        let product = {
-            product_id:elem._id
-
-        }
-        product = JSON.stringify(product)
-        let carData = await fetch("https://myfirssstapinodejs.herokuapp.com/cart",{
-            method:"POST",
-            body:product,
-            headers:{
-                "Content-Type":"application/json",
-            }
-        })
-
-    } catch (err) {
-    console.log(err.message);
-  }
-}
-
-
-
-
-</script>
-<script src="./script/product_show.js"></script>
+ <script src="./script/product_show.js"></script>
