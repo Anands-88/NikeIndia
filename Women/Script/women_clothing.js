@@ -5,7 +5,6 @@ let data;
      let res = await fetch ("https://myfirssstapinodejs.herokuapp.com/womenCloth")
      data = await res.json();
     
-     console.log(data)
      showData(data)
      
     //   console.log(res)
