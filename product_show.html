@@ -116,8 +116,9 @@
 
 <!-- <script src="./script/product_show.js"></script> -->
 <script>
-    var product = JSON.parse(localStorage.getItem("product")) 
+     var product = JSON.parse(localStorage.getItem("product")) 
     var cart_data = JSON.parse(localStorage.getItem("cart")) || []
+    // console.log("product",product)
     var wishlist_data =  []
     console.log(product)
     // console.log(wishlist_data)
@@ -127,9 +128,17 @@ function showProduct({product_name, product_category, product_image, product_pri
     var body= document.querySelector("#Product_show_main_div");
         body.innerHTML = null;
 
-    var image = document.createElement("img");
-        image.setAttribute("src", product_image[0]);
-        image.setAttribute("id", "product_show_image");
+    var image1 = document.createElement("img");
+        image1.setAttribute("src", product_image[0]);
+        image1.setAttribute("id", "product_show_image");
+
+        var image2 = document.createElement("img");
+        image2.setAttribute("src", product_image[1]);
+        image2.setAttribute("id", "product_show_image");
+
+        var image3 = document.createElement("img");
+        image3.setAttribute("src", product_image[2]);
+        image3.setAttribute("id", "product_show_image");
 
     var div = document.createElement("div");
         div.setAttribute("id", "product_show_div")
@@ -149,17 +158,10 @@ function showProduct({product_name, product_category, product_image, product_pri
     var addcart = document.createElement("button");
         addcart.textContent = "Add to cart";
         addcart.id = "product_show_add_to_cart_button";
-        addcart.addEventListener("click", function(event){
-            event.preventDefault();
-            var obj = {
-                prodtitle: product_name,
-                prodcat: product_category,
-                proddes: product_description,
-                prodimg: product_image,
-                prodprice: product_price,
-            }
-            cart_data.push(obj);
-            localStorage.setItem("cart", JSON.stringify(cart_data));
+
+        addcart.addEventListener("click", function(){
+            myCart(product)    
+
         })
 
     var wishlist = document.createElement("button");
@@ -187,8 +189,30 @@ function showProduct({product_name, product_category, product_image, product_pri
 
     div.append(title, price, tax, addcart, br, wishlist, description);
 
-    body.append(image, div);
+    body.append(image1,div);
 }
+
+async function myCart(elem){
+    console.log("elem",elem)
+    try{
+        let product = {
+            product_id:elem._id
+
+        }
+        product = JSON.stringify(product)
+        let carData = await fetch("https://myfirssstapinodejs.herokuapp.com/cart",{
+            method:"POST",
+            body:product,
+            headers:{
+                "Content-Type":"application/json",
+            }
+        })
+
+    } catch (err) {
+    console.log(err.message);
+  }
+}
+
 
 
 

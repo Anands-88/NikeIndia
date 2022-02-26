@@ -7,20 +7,20 @@
     <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
     <title>Cart</title>
     
-    <link rel="stylesheet" href="../style/navbar.css">
-    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/footer.css">
     <style>
       #cart-main {
         display: flex;
         height: 800px;
         /* border: 2px solid red; */
-        width: 60%;
+        width: 70%;
         margin: auto;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-top: 8%;
       }
       #cart-div {
-        width: 60%;
+        width: 100%;
         overflow-x: scroll;
         /* border: 2px solid green; */
       }
@@ -61,6 +61,7 @@
         /* border: 2px solid rgb(119, 117, 214); */
         width: 20%;
       }
+     
       #cart-total {
         display: flex;
       }
@@ -83,6 +84,26 @@
       .carthr{
         height: 0;
       }
+      .remove-button{
+        color: black;
+      }
+      .cartprodimg{
+        height: 20%;
+        width: 40%;
+      }
+      .cart-items{
+        width: 100%;
+        display: flex;
+      }
+      .cart-items>p:nth-child(3){
+        color: rgb(12, 130, 233);
+      
+        
+      }
+      .cart-items>button{
+        height: 5%;
+      }
+      
     </style>
   </head>
   <body>
@@ -128,29 +149,19 @@
                
            </div>
   </div>
-     
+  
     <div id="cart-main">
      
       <div id="cart-div">
-        <!-- <p id="bag-div" >Bag</p> -->
-       
-        <!-- <div class="cart-items">
-          <div>
-            <img
-              src="https://images.nike.com/is/image/DotCom/DH9719_100_A_PREM?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <p>Nike Air More Uptempo</p>
-            <p>Older Kids' Shoes</p>
-            <p>Size</p>
-            <p>Quantity</p>
-            <p>Move to Favorites</p>
-            <p>Remove</p>
-          </div>
-          <div><p>Price</p></div>
-        </div> -->
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
       <div id="cart-summary">
         <p>Summary</p>
@@ -223,5 +234,7 @@
         </div>
     </div>
   </body>
+  
 </html>
+
 <script src="./script/cart.js"></script>
