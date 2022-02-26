@@ -131,18 +131,14 @@
 
 <!-- <script src="./script/men_shoes.js"></script> -->
 <script>
-    shownews()
+shownews()
  async function shownews(){
   let res = await fetch ("https://myfirssstapinodejs.herokuapp.com/menShoes")
   let data = await res.json();
-
   console.log(data)
   appenddata(data)
-  
 //   console.log(res)
 }
-
-
 // showProduct()
 function appenddata(data){
 data.forEach(function(data){
@@ -171,10 +167,6 @@ container.append(div)
     })
 }
 
-
-
-
-
 function fiter_data(){
             var selected = document.querySelector("#fitler_women_shoe_clothing").value;
             if(selected === ""){
@@ -182,7 +174,7 @@ function fiter_data(){
             }
             else{
                 var filter = data.filter(({prodcat}) =>{
-                    return (prodcat == selected);
+                return (prodcat == selected);
                 });
                 showdata(filter);
             }
