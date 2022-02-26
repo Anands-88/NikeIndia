@@ -16,7 +16,7 @@ router.post("/signin",async(req,res)=> {
         if(req.body.email == user.email && user.password == req.body.password)
         {
             name = `${user.firstname} ${user.lastname}`;
-            return res.redirect("/users/home")
+            return res.redirect("/in/home")
         }
         else
         {
@@ -27,14 +27,14 @@ router.post("/signin",async(req,res)=> {
     }
     catch(error)
     {
-        return res.redirect("/users/register");
+        return res.redirect("/in/register");
     }
 });
 
 router.get("",async(req,res)=> {
     try{
         const user = await User.find().lean().exec()
-        return res.redirect("/users/register");
+        return res.redirect("/in/register");
     }
     catch(error)
     {
@@ -72,12 +72,12 @@ router.post("/register", body("email").isEmail()
             else
             {   
                 const user = await User.create(req.body)
-                return res.redirect("/users/signin");
+                return res.redirect("/in/signin");
             } 
         }
         catch(error)
         {
-            return res.redirect("/users/register");
+            return res.redirect("/in/register");
         }
 });
 

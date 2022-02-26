@@ -18,7 +18,7 @@
         }
     </script>
     <div class = "form">
-        <form action="/users/register" id ="signup_form" method="post" onsubmit="formSubmit">
+        <form action="/in/register" id ="signup_form" method="post" onsubmit="formSubmit">
             <input type="email" id = "email" placeholder="Email address" name="email" autofocus  required minlength="5" autocomplete="off">
             <kbd style="color: red;"><%=message?.email%></kbd>
 
@@ -51,7 +51,7 @@
                     <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=IN&language=en&mobileStatus=true&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Terms of Use.</a></p>
             </div>
                 <button id = "join_us">JOIN US</button>
-            <p>Already a Member?<a href="/users/signin"> Sign In.</a></p>
+            <p>Already a Member?<a href="/in/signin"> Sign In.</a></p>
         </form>
     </div>
 </div>
