@@ -130,9 +130,10 @@
   }
 /* eye toggle*/
  #togglePassword{
-  margin-left: -30px;
+  margin-left: -25px;
   cursor: pointer;
-  transform: translateX(320px);
+  transform: translate(-5px,53px);
+
 }
 
 #password{
