@@ -10,9 +10,9 @@ router.get("/cart",(req,res) =>
     return res.render("cart");
 })
 
-router.get("/clothing",(req,res) =>
+router.get("/kids_clothing",(req,res) =>
 {
-    return res.render("clothing");
+    return res.render("kids_clothing");
 })
 
 router.get("/customize",(req,res) =>

@@ -7,7 +7,7 @@
         let message = "<%=message%>"
           if(message != "[object Object]" || message != undefined)
           {   
-
+            console.log(document.querySelector("#join_us_nav_bar > a").textContent)
               document.querySelector("#join_us_nav_bar > a").textContent = message
           }
           
