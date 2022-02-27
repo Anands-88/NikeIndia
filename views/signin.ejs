@@ -1,5 +1,8 @@
-<%- include("./html", {title: "Nike Signin", signLink:"/CSS/sign_in.css", footer:"/CSS/footer.css"})%>
+<%- include("./html", {title: "Nike Signin",navbar:"/CSS/navbar.css", signLink:"/CSS/sign_in.css", footer:"/CSS/footer.css"})%>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<div id="navbar_suraj"></div> <!--NAVBAR-->
+
 <div id = "login_box">
     <div>
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fdownload%2Fblack%2Fnike-512.jpg&f=1&nofb=1" alt="">
@@ -35,6 +38,12 @@
 </body>
 </html>
 <script type = "module">
+    import navbar from "/Javascript/navbar_html.js"
+    let navbar_html =  navbar()
+    console.log(navbar_html)
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
+
+
     import footer from "/Javascript/footer.js"
     let footer_html = footer()
     document.querySelector("#customise_footer").innerHTML = footer_html  

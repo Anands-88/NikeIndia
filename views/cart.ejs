@@ -1,0 +1,157 @@
+<%- include("./html", {title: "Nike Cart", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <style>
+      #cart-main {
+        display: flex;
+        height: 800px;
+        /* border: 2px solid red; */
+        width: 70%;
+        margin: auto;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin-top: 8%;
+      }
+      #cart-div {
+        width: 100%;
+        overflow-x: scroll;
+        /* border: 2px solid green; */
+      }
+      #cart-div > p:nth-child(1) {
+        font-size: x-large;
+        position: fixed;
+      }
+      #cart-summary {
+        width: 40%;
+        margin-left: 5%;
+        /* border: 2px solid rgb(101, 202, 76); */
+      }
+      #cart-summary > p:nth-child(1) {
+        font-size: x-large;
+      }
+      .cart-items {
+        display: flex;
+        /* border: 2px solid grey; */
+      }
+      .cart-items > div:nth-child(1) {
+        /* border: 2px solid black; */
+        width: 30%;
+      }
+      .cart-items > div:nth-child(1) > img {
+        width: 100%;
+        height: 100%;
+      }
+      .cart-items > div:nth-child(2) {
+        /* border: 2px solid rgb(21, 201, 162); */
+        width: 50%;
+        padding-left: 20px;
+      }
+      .cart-items > div:nth-child(2)>p:nth-child(1){
+       font-size: larger;
+       font-weight: 500;
+      } 
+      .cart-items > div:nth-child(3) {
+        /* border: 2px solid rgb(119, 117, 214); */
+        width: 20%;
+      }
+     
+      #cart-total {
+        display: flex;
+      }
+      #cart-total > div:nth-child(2) {
+        padding-left: 30px;
+      }
+      #cart-checkout > button {
+        border: none;
+        height: 60px;
+        width: 70%;
+        background-color: black;
+        color: white;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+      #cart-checkout > button:hover {
+        background-color: rgba(0, 0, 0, 0.733);
+        transition: 0.5s;
+      }
+      .carthr{
+        height: 0;
+      }
+      .remove-button{
+        color: black;
+      }
+      .cartprodimg{
+        height: 20%;
+        width: 40%;
+      }
+      .cart-items{
+        width: 100%;
+        display: flex;
+      }
+      .cart-items>p:nth-child(3){
+        color: rgb(12, 130, 233);
+      
+        
+      }
+      .cart-items>button{
+        height: 5%;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="navbar_suraj"></div>
+  
+    <div id="cart-main">
+     
+      <div id="cart-div">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id="cart-summary">
+        <p>Summary</p>
+        <div id="cart-total">
+          <div>
+            <p>Subtotal</p>
+            <p>Estimated Delivery & Handling</p>
+            <hr class="carthr" />
+            <p>Total</p>
+            <hr class="carthr" />
+          </div>
+          <div>
+            <p id="subtotal" >0</p>
+            <p>150</p>
+            <hr class="carthr" />
+            <p id="grandtotal" >0</p>
+            <hr class="carthr" />
+          </div>
+        </div>
+        <div id="cart-checkout">
+          <button  id= "checkoutbut">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <div id = customise_footer></div>
+
+  </body>
+  
+</html>
+
+<script src="./script/cart.js"></script>
+<script type = "module">
+
+  import navbar from "/Javascript/navbar.js"
+  let navbar_html =  navbar()
+  document.querySelector("#navbar_suraj").innerHTML = navbar_html
+
+
+  import footer from "/Javascript/footer.js"
+  let footer_html = footer()
+  document.querySelector("#customise_footer").innerHTML = footer_html  
+</script>

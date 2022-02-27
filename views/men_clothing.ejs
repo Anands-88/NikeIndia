@@ -1,0 +1,44 @@
+<%- include("./html", {title: "Nike Men's Clothing. Nike IN", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
+
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/menshoes.css">
+    <!-- Navbar -->
+    <div id="navbar_suraj"></div>
+
+    <div id="women_shoes_filter_sort">
+        <h1>Men's Clothing</h1>
+        <div style="display: flex;">
+            <select onchange="fiter_data()" id="fitler_women_shoe_clothing">
+                <option value="">Filter</option>
+                <option value="lifstyle">Lifstyle</option>
+                <option value="Men's Shorts">Shorts</option>
+                <option value="Men's T-Shirt">T-shirts</option>
+                <option value="jordan">Jordan</option>
+                <option value="walking">Walking</option>
+            </select>
+            <select onchange="sort_data()" id="sort_women_shoe_clothing">
+                <option value="">Sort</option>
+                <option value="low">Low-High</option>
+                <option value="">High-low</option>
+            </select>
+        </div>
+       
+    </div>
+    <div id="men_cloth_container"></div> 
+    <div id = "customise_footer"></div> 
+</body>
+</html>
+
+<script src="./script/men_clothing.js"></script>
+
+<script type = "module">
+
+    import navbar from "/Javascript/navbar.js"
+    let navbar_html =  navbar()
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
+  
+  
+    import footer from "/Javascript/footer.js"
+    let footer_html = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_html  
+  </script>

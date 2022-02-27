@@ -1,0 +1,16 @@
+<%- include("./html", {title: "Sneakers Feed", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
+
+    <title>Snickers</title>
+  <link rel="stylesheet" href="./sneakersstyle/sneakers.css">
+  </head>
+  <body onload="sneakerfeed()">
+    <div id="feed-header">
+      <p onclick="FeedPage()" >Feed</p>
+      <p onclick="InStockPage()" >In-Stock </p>
+      <p onclick="UpcomingPage()"  >Upcoming</p>
+    </div>
+    <div id="feed-main"></div>
+  </body>
+</html>
+<script src="js/sneakerdata.js"></script>
+

@@ -1,5 +1,9 @@
-<%- include("./html", {title: "Nike Signup", signLink:"/CSS/sign_up.css",footer:"/CSS/footer.css"})%>
+<%- include("./html", {title: "Nike Signup", navbar:"/CSS/navbar.css" ,signLink:"/CSS/sign_up.css",footer:"/CSS/footer.css"})%>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+<div id="navbar_suraj"></div> <!--NAVBAR-->
+
 <div id = "signup_box">
     <div>
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fdownload%2Fblack%2Fnike-512.jpg&f=1&nofb=1" alt="">
@@ -59,10 +63,17 @@
 </body>
 </html>
 <script src="/Javascript/signup.js"></script> 
+
 <script type = "module">
+    import navbar from "/Javascript/navbar_html.js"
+    let navbar_html =  navbar()
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
+
+
     import footer from "/Javascript/footer.js"
     let footer_html = footer()
     document.querySelector("#customise_footer").innerHTML = footer_html 
+
     const togglePassword = document.querySelector('#togglePassword');
   const password = document.querySelector('#password');
  

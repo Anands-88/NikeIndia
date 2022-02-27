@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customise</title>
+<%- include("./html", {title: "Nike Customize", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
+
     <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/navbar.css">
     <link rel="stylesheet" href="../style/customize.css">
-    <link rel="stylesheet" href="../anand footer/footer.css">
     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -78,8 +71,13 @@
 <script src="../script/navbar.js"></script>
 
 <script type = "module">
-    import footer from "../anand footer/footer.js"
 
-    let footer_styles = footer()
-    document.querySelector("#customise_footer").innerHTML = footer_styles
-</script>
+    import navbar from "/Javascript/navbar.js"
+    let navbar_html =  navbar()
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
+  
+  
+    import footer from "/Javascript/footer.js"
+    let footer_html = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_html  
+  </script>

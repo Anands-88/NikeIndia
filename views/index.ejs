@@ -1,6 +1,8 @@
-<%- include("./html", {title: "Nike. Just do It. Nike IN", signLink:"", footer:"/CSS/footer.css"})%>
+<%- include("./html", {title: "Nike. Just do It. Nike IN", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
 <link rel="stylesheet" href="/CSS/index.css">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@900&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@900&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <script>
         let message = "<%=message%>"
           if(message != "[object Object]")
@@ -8,6 +10,8 @@
               alert(message)
           }
       </script>
+      <div id="navbar_suraj"></div>
+
        <div class = "image_content">
         <div>
             <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1255,c_limit/558286a5-5ad5-4afd-bcac-a696a30bbcad/nike-just-do-it.png" alt="">
@@ -120,6 +124,13 @@
 </body>
 </html>
 <script type = "module">
+
+    import navbar from "/Javascript/navbar.js"
+    let navbar_html =  navbar()
+    console.log(navbar_html)
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
+
+
     import footer from "/Javascript/footer.js"
     let footer_html = footer()
     document.querySelector("#customise_footer").innerHTML = footer_html  

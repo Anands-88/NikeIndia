@@ -1,0 +1,109 @@
+<%- include("./html", {title: "Nike Store. Favourites", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
+
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <link rel="stylesheet" href="../style/menshoes.css">
+</head>
+<body>
+
+    <div id="navbar_suraj"></div>
+
+    <div><h2 style="text-align: center;">Your Favourite itmes will appear here</h2></div>
+    <div id="men_wishlist_container"></div>
+
+</body>
+</html>
+
+<script src="../script/navbar.js"></script>
+
+<script type="module">
+//     var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+//     console.log(wishlist)
+// //     showdata(wishlist)
+// showdata(wishlist)
+
+// function showdata(wishlist){
+//     var b = document.getElementById("men_wishlist_container").innerHTML = null;
+//     wishlist.map(({prodtitle,prodimg,desprod,prodprice})=>{
+//         var div = document.createElement("div");
+
+//         div.addEventListener("click",function(event){
+//             var obj = {
+                
+//                       imageprod:prodimg,
+//                       titleprod:prodtitle,
+//                       porddes:desprod,
+//                       priceprod:prodprice
+
+//             };
+
+//             console.log(obj);
+//             localStorage.setItem("wishlist",JSON.stringify(obj))
+//             window.location.href = "product_show.html"
+//         });
+//         var image = document.createElement("img");
+//         image.src = prodimg[0];
+//         image.className += "wishlistimg"
+//         var name = document.createElement("p")
+//         name.innerHTML = prodtitle;
+//         // var category = document.createElement("p")
+//         // category.setAttribute("class","cat")
+//         // category.innerHTML = prodcat;
+//         var price = document.createElement("p");
+//         price.innerHTML= "₹ "+prodprice;
+//         var space = document.createElement("br")
+        
+//         div.append(image,name,price);
+//         b.append(div);
+
+//     })
+// }
+
+// var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
+//     function Menpage(){
+//         window.location.href = "men.html"
+//     }
+
+//     function showdata(wishlist){
+//     var b = document.getElementById("men_wishlist_container");
+
+//     wishlist.map(({prodtitle,prodimg,prodcat,porddes})=>{
+//         var div = document.createElement("div");
+
+//         div.addEventListener("click",function(event){
+//             var obj = {
+                
+//                       productimage:prodimg,
+//                       productname:prodtitle,
+//                       productcat:prodcat,
+//                       proddes:porddes,
+                      
+
+//             };
+//             console.log(obj);
+//             localStorage.setItem("product",JSON.stringify(obj))
+//             window.location.href = "productshowcase.html"
+//         });
+//         var image = document.createElement("img");
+//         image.src = prodimg;
+//         var name = document.createElement("p")
+//         name.innerHTML = prodtitle;
+//         var category = document.createElement("p")
+//         category.setAttribute("class","cat")
+//         category.innerHTML = prodcat;
+        
+//         var space = document.createElement("br")
+//         div.append(image,name,category,space);
+//         b.append(div);
+
+//     })
+// }
+var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
+ function Menpage(){
+     window.location.href = "men.html"
+ }
+
+
+</script>
+
+<script src="./script/wishlist.js"></script>

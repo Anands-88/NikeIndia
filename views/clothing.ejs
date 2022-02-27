@@ -1,0 +1,43 @@
+<%- include("./html", {title: "Kids's Clothing. Nike IN, navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
+
+    <link rel="stylesheet" href="./styles/kids_shoes_cloth.css">
+</head>
+<body>
+    <div id = "navbar_suraj"></div>
+    <div id="women_shoe_main_div">
+        <div id="women_shoes_filter_sort">
+            <h1>Kid's clothes</h1>
+            <div style="display: flex;">
+                <select onchange="fiter_data()" id="fitler_women_shoe_clothing">
+                    <option value="">Filter</option>
+                    <option value="tracksuits">Tracksuits</option>
+                    <option value="tops_tshirts">Tops & T-Shirts</option>
+                    <option value="shorts">shorts</option>
+                    <option value="jackets_vests">Jackets & vests</option>
+                    <option value="hoodies">Hoodies</option>
+                </select>
+                <select onchange="sort_data()" id="sort_women_shoe_clothing">
+                    <option value="">Sort</option>
+                    <option value="low">Low-High</option>
+                    <option value="high">High-low</option>
+                </select>
+            </div>
+        </div>
+        <div id="women_shoes_container"></div>
+    </div>
+    <div id = "customise_footer"></div>
+</body>
+</html>
+
+<script src="./script/kidsClothing.js"></script>
+<script type = "module">
+
+    import navbar from "/Javascript/navbar.js"
+    let navbar_html =  navbar()
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
+  
+  
+    import footer from "/Javascript/footer.js"
+    let footer_html = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_html  
+  </script>
