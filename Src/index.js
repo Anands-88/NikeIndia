@@ -16,7 +16,7 @@ app.set("view engine","ejs")
 // app.set("")
 app.use(express.static("Public"))
 
-const port = process.env.PORT 
+const port = process.env.PORT || 3000;
 app.listen(port,async() => {
     try{
         await connect()
