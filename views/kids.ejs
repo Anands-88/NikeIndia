@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<%- include("./html", {title: "NIke Kids", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
+
     <style>
          body{
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -300,9 +295,10 @@
     </style>
 </head>
 <body>
+    <div id ="navbar_suraj"></div>
     <div id="kid_div1">
-        <a href="shoes2.html"><p>Shoes</p></a>
-        <a href="clothing.html"><p>Clothing</p></a>
+        <a href="/in/shoes2"><p>Shoes</p></a>
+        <a href="/in/clothing"><p>Clothing</p></a>
     </div>
 
     <div id="kid_container">
@@ -411,69 +407,31 @@
         </div>
 
     </div>
+
+    <div id = "customise_footer"></div>
   
 </body>
 </html>
+<script type = "module">
+
+    import {navbar,mobile} from "/Javascript/navbar.js"
+    mobile()
+    let navbar_html =  navbar()
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
+  
+  
+    import footer from "/Javascript/footer.js"
+    let footer_html = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_html  
+  </script>
 <script>
-    let data=[
-        {
-            prodtitle:'Nike Dynamo GO SE',
-            prodimg:'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1cb91a0c-c23c-4dad-8840-0b2ddfc82aea/dynamo-go-se-shoes-L9PHDR.png',
-            proddes:'Growl! The Nike Dynamo GO SE roars with colours and graphics that celebrate the Year of the Tiger. An easy on/off collapsible heel means your little one can slip in and go. The awesome squiggly lines are also meant to keep moving feet secure while they stalk their prey—or just roam around at playtime.',
-            prodcat:'Baby/Toddler Shoes',
-            prodprice:4999
-        },
-        {
-            prodtitle:'Nike Dynamo GO SE',
-            prodimg:'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5acc07ab-1eb7-40e5-ae5b-d5a97522f7ca/dynamo-go-se-younger-shoe-1xgC09.png',
-            proddes:'Growl! The Nike Dynamo GO SE roars with colours and graphics that celebrate the Year of the Tiger. An easy on/off collapsible heel means your little one can slip in and go. The awesome squiggly lines are also meant to keep moving feet secure while they stalk their prey—or just roam around at playtime.',
-            prodcat:"Younger Kids' Shoe",
-            prodprice:5295
-        },
-        {
-            prodtitle:'Nike Force 1 LV8',
-            prodimg:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/27727f00-ff84-4956-ad0b-01c6ff2110e7/force-1-lv8-shoes-sKnXzF.png",
-            proddes:'Let these red canvas sneakers bring your little one luck as they ring in the Chinese New Year! Fun, playful embroidered details welcome in 2022, Year of the Tiger. Padding around the ankle helps keep little feet at play in the comfort of the classic.',
-            prodcat:'Toddler Shoes',
-            prodprice:3495
-        },
-        {
-            prodtitle:'Nike Air Force 1 LV8',
-            prodimg:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b7868af9-3936-4a6d-9c6a-fa2abed591a1/air-force-1-lv8-older-shoes-WTksPt.png",
-            proddes:"The radiance lives on in the Nike Air Force 1 LV8, the basketball original that puts a fresh spin on what you know best: crisp leather, bold colours and the right amount of flash to make you shine. Slip into a classic white-leather look accented with a furry friend to take you into the New Year.",
-            prodcat:"Older Kids' Shoes",
-            prodprice:6495
-        },
-        {
-            prodtitle:"Nike Force 1",
-            prodimg:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3847e91f-e4f4-4e72-a39b-90a22d4b9162/force-1-shoes-PfZNkZ.png",
-            proddes:"Lace up little feet into the iconic Nike Force 1 for a classic look and feel.Soft cushioning helps keep little feet comfy for every growing step.",
-            prodcat:"Baby & Toddler Shoes",
-            prodprice:2995
-        },
-        {
-            prodtitle:"Nike Force 1",
-            prodimg:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f654ecf6-0a9e-49c0-9a91-2318658be66e/force-1-younger-shoes-h6p0zj.png",
-            proddes:"Lace up little feet in the Nike Force 1 for the classic look and feel of the legendary AF-1.Soft cushioning helps keep their steps feeling smooth, and leather is easy to clean.",
-            prodcat:"Younger Kids' Shoes",
-            prodprice:3995
-        },
-        {
-            prodtitle:"Nike Force 1 LE",
-            prodimg:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5b2969bb-48df-463e-8073-bc96a387dc48/force-1-le-and-shoe-hZ24qR.png",
-            proddes:"The Nike Force 1 LE brings back the '82 hardwood icon into an everyday style for kids with an all-white or all-black look. The durability, cushioning and feel introduce little feet to a classic.",
-            prodcat:"Baby and Toddler Shoe",
-            prodprice:2995
-        },
-        {
-            prodtitle:"Nike Revolution 6",
-            prodimg:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/32170fd7-7231-4e3b-b6a7-9073de6c22e8/revolution-6-older-road-running-shoes-RmdT3m.png",proddes:"We prioritise comfort, especially for our growing athletes. Made with 20% recycled content by weight, you can take these lightweight, breathable running shoes from all-day play to any-time wear and even athletics training. Lightweight, breathable and cushioned for growing feet, the race starts now.",
-            prodcat:"Older Kids' Road Running Shoes",
-            prodprice:3495
-        },
-        
-    ]
-    appendData(data);
+        fetchData()
+        async function fetchData(){
+        let res=await fetch("https://myfirssstapinodejs.herokuapp.com/kidsShoes")
+        data= await res.json()
+        appendData(data);
+   }
+   
 
 
     function appendData(arr){
@@ -481,13 +439,13 @@
             let container=document.getElementById('kid_container2')
             let div=document.createElement('div')
             let img=document.createElement('img')
-            img.src=elem.prodimg
+            img.src=elem.product_image[0]
             let title=document.createElement('p')
-            title.innerText=elem.prodtitle
+            title.innerText=elem.product_name
             let cat=document.createElement('p')
-            cat.innerText=elem.prodcat
+            cat.innerText=elem.product_category
             let price=document.createElement('p')
-            price.innerText='₹'+elem.prodprice;
+            price.innerText='₹'+elem.product_price;
             div.append(img,title,cat,price)
             container.append(div);
         })

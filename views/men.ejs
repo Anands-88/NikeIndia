@@ -1,11 +1,9 @@
 <%- include("./html", {title: "Men's Shoes, Clothing & Accessories", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
 
     <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
-    <link rel="stylesheet" href="../style/men.css">
+    <link rel="stylesheet" href="/CSS/men.css">
     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
 
-</head>
-<body>
     <!-- Navbar -->
     <div id="navbar_suraj"></div>
 
@@ -78,7 +76,8 @@
 </html>
 <script type = "module">
 
-    import navbar from "/Javascript/navbar.js"
+    import {navbar,mobile} from "/Javascript/navbar.js"
+    mobile()
     let navbar_html =  navbar()
     document.querySelector("#navbar_suraj").innerHTML = navbar_html
   
@@ -114,10 +113,4 @@ function showdata(data){
      console.log(data)
  })
 }
-var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
- function Menpage(){
-     window.location.href = "./men.html"
- }
-
-
 </script>

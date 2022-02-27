@@ -11,7 +11,7 @@
           }
       </script>
       <div id="navbar_suraj"></div>
-
+      
        <div class = "image_content">
         <div>
             <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1255,c_limit/558286a5-5ad5-4afd-bcac-a696a30bbcad/nike-just-do-it.png" alt="">
@@ -105,17 +105,17 @@
         <div id = "more_like">
             <div class = "men">
                 <div class = "gen_button">
-                    <a href="">Men's</a>
+                    <a href="/in/men">Men's</a>
                 </div>
             </div>
             <div class = "women">
                 <div class = "gen_button">
-                    <a href="">Women's</a>
+                    <a href="/in/women">Women's</a>
                 </div>
             </div>
             <div class = "kid">
                 <div class = "gen_button">
-                    <a href="">Kids'</a>
+                    <a href="/in/kids">Kids'</a>
                 </div>
             </div>
         </div>
@@ -125,7 +125,8 @@
 </html>
 <script type = "module">
 
-    import navbar from "/Javascript/navbar.js"
+    import {navbar,mobile} from "/Javascript/navbar.js"
+    mobile()
     let navbar_html =  navbar()
     console.log(navbar_html)
     document.querySelector("#navbar_suraj").innerHTML = navbar_html

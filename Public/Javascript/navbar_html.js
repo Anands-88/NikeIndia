@@ -7,34 +7,35 @@ function navbar()
     <div id="right">
        <p>Help</p>
         <hr>
-        <p id="join_us_nav_bar">Join Us</p>
+        <a href=""></a>
+        <p id="join_us_nav_bar"><a href="/in/join_us">Join Us</a></p>
           <hr>
-         <p id="sign_in_nav_bar">Sign In</p>
+         <p id="sign_in_nav_bar"><a href="/in/signin">Sign In</a></p>
         
     </div>
      </div> 
      <div id="bottom">
          <div class="left">
-            <a href="../index.html"><svg class="pre-logo-svg" height="50px" width="65px" fill="#111" viewBox="0 0 69 32"><path d="M68.56 4L18.4 25.36Q12.16 28 7.92 28q-4.8 0-6.96-3.36-1.36-2.16-.8-5.48t2.96-7.08q2-3.04 6.56-8-1.6 2.56-2.24 5.28-1.2 5.12 2.16 7.52Q11.2 18 14 18q2.24 0 5.04-.72z"></path></svg></a> 
+            <a href="/in/home"><svg class="pre-logo-svg" height="50px" width="65px" fill="#111" viewBox="0 0 69 32"><path d="M68.56 4L18.4 25.36Q12.16 28 7.92 28q-4.8 0-6.96-3.36-1.36-2.16-.8-5.48t2.96-7.08q2-3.04 6.56-8-1.6 2.56-2.24 5.28-1.2 5.12 2.16 7.52Q11.2 18 14 18q2.24 0 5.04-.72z"></path></svg></a> 
           
          </div>
          <div id="center_phone">
          </div>
          <div class="center">
-            <p id="men_page_nav_bar">Men</p>
-            <p id="women_page_nav_bar">Women</p>
-            <p id="kid_page_nav_bar">Kids</p>
-            <p id="customize_page_nav_bar">Customize</p>
-            <p id="sale_page_nav_bar">Sale</p>
-             <p id="snkrs_page_nav_bar">SNKRS</p>
+            <p id="men_page_nav_bar"><a href="/in/men">Men</a></p>
+            <p id="women_page_nav_bar"><a href="/in/women">Women</a></p>
+            <p id="kid_page_nav_bar"><a href="/in/kids">Kids</a></p>
+            <p id="customize_page_nav_bar"><a href="/in/customize">Customize</a></p>
+            <p id="sale_page_nav_bar"><a href="/in/sales">Sale</a></p>
+             <p id="snkrs_page_nav_bar"><a href="/in/sneakers">SNKRS</a></p>
       </div>
       <div class="search">
           <i id="icon" class="fas fa-search"></i>
           <input id="search_input" type="text" placeholder="Search">
       </div>
       <div class="right">
-        <a href="wishlist.html"><i id="hearth" class="far fa-heart"></i></a> 
-        <a href="cart.html"><svg width="30px" height="30px" fill="#111" viewBox="0 0 24 24"><path d="M16 7a1 1 0 0 1-1-1V3H9v3a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1z"></path><path d="M20 5H4a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a2 2 0 0 0-2-2zm0 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7h16z"></path></svg></a>
+        <a href="/in/wishlist"><i id="hearth" class="far fa-heart"></i></a> 
+        <a href="/in/cart"><svg width="30px" height="30px" fill="#111" viewBox="0 0 24 24"><path d="M16 7a1 1 0 0 1-1-1V3H9v3a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1z"></path><path d="M20 5H4a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a2 2 0 0 0-2-2zm0 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7h16z"></path></svg></a>
       </div>
     </div>
     <div class="text">
@@ -42,4 +43,104 @@ function navbar()
 </div>`
 }
 
-export default navbar
+function mobile()
+{
+  var phone = window.matchMedia("(max-width: 414px)");
+    navbar(phone);
+    phone.addListener(navbar);
+
+    function navbar(phone){
+        if(phone.matches){
+            var phone_div = document.querySelector(".center");
+                phone_div.style.display = "none";
+
+            var body = document.querySelector("#center_phone");
+                body.innerHTML = null;
+
+            var sel = document.createElement("select");
+                sel.setAttribute("style", "-webkit-appearance: none;");
+
+            var op1 = document.createElement("option");
+                op1.text = "|||";
+
+            var op2 = document.createElement("option");
+                op2.text = "Favorite";
+
+            var op3 = document.createElement("option");
+                op3.text = "Cart";
+
+            var op4 = document.createElement("option");
+                op4.text = "Men";
+
+            var op5 = document.createElement("option");
+                op5.text = "Women";
+
+            var op6 = document.createElement("option");
+                op6.text = "Kids";
+
+            var op7 = document.createElement("option");
+                op7.text = "Customise";
+    
+            var op8 = document.createElement("option");
+                op8.text = "Sales";
+
+            var op9 = document.createElement("option");
+                op9.text = "SNKRS";
+
+            sel.add(op1)
+            sel.add(op2)
+            sel.add(op3)
+            sel.add(op4)
+            sel.add(op5)
+            sel.add(op6)
+            sel.add(op7)
+            sel.add(op8)
+            sel.add(op9)
+
+            body.append(sel);
+
+            sel.addEventListener("change", () => {
+                
+                let sel_value = event.target.value
+                
+                if(sel_value == "Favorite")
+                {
+                    window.location.href = "/in/wishlist"
+                }
+                else if(sel_value == "Cart")
+                {
+                    window.location.href = "/in/cart"
+                }
+                else if(sel_value == "Men")
+                {
+                    window.location.href = "/in/men"
+                }
+                else if(sel_value == "Women")
+                {
+                    window.location.href = "/in/women"
+                }
+                else if(sel_value == "Kids")
+                {
+                    window.location.href = "/in/kids"
+                }
+                else if(sel_value == "Customise")
+                {
+                    window.location.href = "/in/customize"
+                }
+                else if(sel_value == "Sales")
+                {
+                    window.location.href = "/in/sales"
+                }
+                else if(sel_value == "SNKRS")
+                {
+                    window.location.href = "/in/sneakers"
+                }
+            })
+        }
+        else{
+            document.querySelector(".center").style.display = "flex";
+        }
+   }
+}
+
+export {navbar,mobile}

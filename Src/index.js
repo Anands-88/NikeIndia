@@ -1,20 +1,45 @@
 const express = require("express");
 require("dotenv").config()
-const app = express();
+const cors = require("cors")
 const connect = require("./config/db")
-const userController = require("./controller/user_controller")
-const salesController = require("./controller/sales_controller")
+const menshoesController =  require("./controllers/nikeMenShoes.controller")
+const menclothController =  require("./controllers/nikeMenCloth.controller")
+const womenshoeController = require("./controllers/nikeWomenShoes.controller")
+const womenclothController = require("./controllers/nikeWomenCloth.controller")
+const kidsshoesController = require("./controllers/nikeKidsShoes.controller")
+const kidsclothController = require("./controllers/nikekidsCloths.controller")
+const saleController = require("./controllers/nikesales.Controller")
+const sneakersFeedController = require("./controllers/sneakersFeed.controller")
+const sneakersUpcomingController = require("./controllers/sneakersUpcoming.controller")
+const sneakersInStockController = require("./controllers/sneakersInStock.controller")
+const cartController = require("./controllers/cart.controller")
+const userController = require("./controllers/user_controller")
+const linksController = require("./controllers/lInks_controller")
 const bodyParser = require("body-parser");
 
+const app = express();
+
+app.set("view engine","ejs")
+app.use(express.static("Public"))
+
 app.use(express.json())
+app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use("/in",userController)
-app.use("/in",salesController)
-app.set("view engine","ejs")
-// app.set("")
-app.use(express.static("Public"))
+app.use("/in",linksController)
+app.use("/menShoes",menshoesController) 
+app.use("/menCloth",menclothController)
+app.use("/womenShoes",womenshoeController)
+app.use("/womenCloth",womenclothController)
+app.use("/kidsShoes",kidsshoesController)
+app.use("/kidsCloth",kidsclothController)
+app.use("/sneakersUpcoming",sneakersUpcomingController)
+app.use("/sale",saleController)
+app.use("/sneakerFeed",sneakersFeedController)
+app.use("/sneakersInStock",sneakersInStockController)
+app.use("/cart",cartController)
 
 const port = process.env.PORT || 3000;
 app.listen(port,async() => {

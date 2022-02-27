@@ -3,8 +3,7 @@
     <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
     <link rel="stylesheet" href="../Style//women_shoes_cloth.css">
     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    
     <!-- Navbar -->
     <div id="navbar_suraj"></div>
 
@@ -29,10 +28,21 @@
         </div>
         <div id="women_shoes_container"></div>
     </div>
+    <div id = "customise_footer"></div>
 </body>
 </html>
 
-<script src="../script/navbar.js"></script>
+<script type = "module">
+
+    import navbar from "/Javascript/navbar.js"
+    let navbar_html =  navbar()
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
+  
+  
+    import footer from "/Javascript/footer.js"
+    let footer_html = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_html  
+  </script>
 
 <script src="../Script/women_clothing.js"></script>
 

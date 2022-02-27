@@ -1,7 +1,7 @@
 <%- include("./html", {title: "Nike Men's Clothing. Nike IN", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
 
     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style/menshoes.css">
+    <link rel="stylesheet" href="/CSS/menshoes.css">
     <!-- Navbar -->
     <div id="navbar_suraj"></div>
 
@@ -29,11 +29,12 @@
 </body>
 </html>
 
-<script src="./script/men_clothing.js"></script>
+<script src="/JavaScript/men_clothing.js"></script>
 
 <script type = "module">
 
-    import navbar from "/Javascript/navbar.js"
+    import {navbar,mobile} from "/Javascript/navbar.js"
+    mobile();
     let navbar_html =  navbar()
     document.querySelector("#navbar_suraj").innerHTML = navbar_html
   

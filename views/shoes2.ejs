@@ -1,10 +1,9 @@
 <%- include("./html", {title: "Kids' Clothing. Nike In", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
 
-    <link rel="stylesheet" href="./styles/kids_shoes_cloth.css">
+    <link rel="stylesheet" href="/CSS/kids_shoes_cloth.css">
     <title>Kids's Clothing. Nike IN</title>
 
-</head>
-<body>
+    <div id ="navbar_suraj"></div>
     <div id="women_shoe_main_div">
         <div id="women_shoes_filter_sort">
             <h1>Kid's Shoes</h1>
@@ -26,6 +25,17 @@
         </div>
         <div id="women_shoes_container"></div>
     </div>
+    <div id = "customise_footer"></div>
 </body>
 </html>
-<script src="./script/kidsShoes.js"></script>
+<script src="/Javascript/kidsShoes.js"></script>
+<script type = "module">
+      import navbar from "/Javascript/navbar.js"
+      let navbar_html =  navbar()
+      document.querySelector("#navbar_suraj").innerHTML = navbar_html
+    
+    
+      import footer from "/Javascript/footer.js"
+      let footer_html = footer()
+      document.querySelector("#customise_footer").innerHTML = footer_html  
+</script>
