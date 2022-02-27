@@ -8,6 +8,35 @@
     margin-top: 3%;
     
 }
+
+
+#women_shoes_filter_sort{
+    width: 90%;
+    /* display: flex; */
+    margin: auto;
+    justify-content: space-between;
+   
+    position: sticky;
+    /* top: 0; */
+    background-color: white;
+}
+
+#fitler_women_shoe_clothing{
+    font-size: larger;
+    height: 50px;
+    /* margin: 2%; */
+    margin-right: 1%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#sort_women_shoe_clothing{
+    font-size: larger;
+    height: 50px;
+    /* margin: 2%; */
+    border: 2px solid black;
+    border-radius: 5px;
+}
 #men_shoes_container > div{
     cursor: pointer;
     /* border: 1px solid red; */
