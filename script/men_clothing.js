@@ -9,34 +9,48 @@ async function shownews(){
 //   console.log(res)
 }
 
-
-// showProduct()
 function appenddata(data){
-data.forEach(function(data){
-var container = document.getElementById("men_cloth_container");
-// container.innerHTML = null;
-var div = document.createElement("div")
+    var body = document.querySelector("#men_cloth_container");
+    body.innerHTML = null;
+    data.map(({product_name, product_image, product_description, product_category, product_price})=>{
+        var div = document.createElement("div");
+            div.addEventListener("click", function(event){
+                var obj = {
+                    titleprod: product_name,
+                    imageprod: product_image,
+                    desprod: product_description,
+                    catprod: product_category,
+                    priceprod: product_price
+                };
 
-div.addEventListener("click",showProduct)
-function showProduct(){
-   window.location.href = "product_show.html"
-   console.log(data)
-   localStorage.setItem("product",JSON.stringify(data))
-}
+                var localobj = JSON.parse(localStorage.getItem("product"));
 
-var name = document.createElement("p")
-name.innerHTML = data.product_name
-var cat  = document.createElement("p");
-cat.innerHTML = data.product_category
-var image = document.createElement("img");
-image.src = data.product_image[0]
+                console.log(obj);
+
+                localStorage.setItem("product", JSON.stringify(obj));
+
+                window.location.href = "product_show.html";
+            });
+
+var image  = document.createElement("img");
+image.setAttribute("src", product_image[0]);
+image.setAttribute("class", "women_prod_image");
+
+var title = document.createElement("h2");
+title.innerText = product_name;
+title.style.marginLeft = "10px";
+
 var price = document.createElement("p");
-price.innerHTML = "₹ " + data.product_price;
-div.append(image,name,cat,price)
-container.append(div)
-// showProduct(data)
-   })
+price.innerText = "₹ "+product_price;
+price.style.marginLeft = "10px";
+
+div.append(image, title, price)
+
+body.append(div)
+    })
 }
+
+
 
 
 function fiter_data(){
