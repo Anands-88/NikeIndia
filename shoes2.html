@@ -97,8 +97,8 @@
             showData(data);
         }
         else{
-            var filter = data.filter(({prodcat}) =>{
-                return (prodcat == selected);
+            var filter = data.filter(({product_category}) =>{
+                return (product_category == selected);
             });
             showData(filter);
         }
@@ -110,12 +110,12 @@
         setTimeout( function(){
             if(select === "low"){
                 data.sort((a, b) => {
-                    return a.prodprice - b.prodprice;
+                    return a.product_price - b.product_price;
                 })
             }
             if(select === "high"){
                 data.sort((a, b)=>{
-                    return b.prodprice - a.prodprice;
+                    return b.product_price - a.product_price;
                 })
             }
 
