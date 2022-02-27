@@ -1,7 +1,7 @@
 <%- include("./html", {title: "Women's Shoes, Clothing. Nike IN", navbar:"/CSS/navbar.css", signLink:"", footer:"/CSS/footer.css"})%>
 
     <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
-    <link rel="stylesheet" href="../style/women.css">
+    <link rel="stylesheet" href="/CSS/women.css">
     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -11,8 +11,8 @@
     <div id="women_upper_sticky_div">
         <h1 id="women_upper_sticky_h1">Women</h1>
         <div id="women_shoes_clothing_div">
-            <a href="../Pages/women_shoes.html"><h2>Shoes</h2></a>
-            <a href="../Pages/women_clothing.html"><h2>Clothing</h2></a>
+            <a href="/in/women_shoes"><h2>Shoes</h2></a>
+            <a href="/in/women_clothing"><h2>Clothing</h2></a>
         </div>
     </div>
     <div id="main_women_container">
@@ -168,7 +168,8 @@
 </html>
 <script type = "module">
 
-    import navbar from "/Javascript/navbar.js"
+    import {navbar,mobile} from "/Javascript/navbar.js"
+    mobile()
     let navbar_html =  navbar()
     document.querySelector("#navbar_suraj").innerHTML = navbar_html
   
@@ -179,8 +180,4 @@
   </script>
 
 <script>
-    var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
- function Menpage(){
-     window.location.href = "men.html"
- }
-</script>
+
