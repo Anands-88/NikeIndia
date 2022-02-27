@@ -97,7 +97,7 @@ router.get("/home",(req,res)=>
     {
         name = "HELLO"
     }
-     const message = `${name}, Welcome to home page`
+     const message = name;
     return res.render("index",{message});
 })
 module.exports = router;

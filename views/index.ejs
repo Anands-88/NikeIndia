@@ -7,8 +7,8 @@
         let message = "<%=message%>"
           if(message != "[object Object]" || message != undefined)
           {   
-
-              document.querySelector("#join_us_nav_bar > a").textContent = message
+            console.log(message);
+            localStorage.setItem("login_User", message);
           }
           
       </script>

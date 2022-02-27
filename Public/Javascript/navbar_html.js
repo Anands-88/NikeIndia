@@ -8,9 +8,10 @@ function navbar()
        <p>Help</p>
         <hr>
         <a href=""></a>
-        <p id="join_us_nav_bar"><a href="/in/join_us">Join Us</a></p>
+        <p id="join_us_nav_bar"></p>
+        <p class="navbar_user_name_show"></p>
           <hr>
-         <p id="sign_in_nav_bar"><a href="/in/signin">Sign In</a></p>
+         <p id="sign_in_nav_bar"></p>
         
     </div>
      </div> 
@@ -45,6 +46,45 @@ function navbar()
 
 function mobile()
 {
+
+    let user = localStorage.getItem("login_User");
+
+    var userName = document.querySelector("#join_us_nav_bar");
+        userName.innerHTML = null;
+
+    var logout = document.querySelector("#sign_in_nav_bar");
+        logout.innerHTML = null;
+
+    if(user != "HELLO"){
+        console.log(user);
+
+        userName.textContent = `Hi! ${user}`;
+
+        
+        logout.innerHTML = "Log Out";
+        logout.addEventListener("click", function(event){
+            event.preventDefault();
+
+            localStorage.setItem("login_User", "HELLO");
+
+            mobile();
+        })
+    }
+
+    else{
+        userName.textContent = "Join Us";
+        userName.addEventListener("click", function(event){
+
+            window.location.href = "/in/join_us";
+        })
+
+        logout.textContent = "Sign In";
+        logout.addEventListener("click", function(event){
+            window.location.href = "/in/signin";
+        })
+
+    }
+
   var phone = window.matchMedia("(max-width: 414px)");
     navbar(phone);
     phone.addListener(navbar);
