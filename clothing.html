@@ -36,7 +36,7 @@
         showfetch()
          async function showfetch(){
             let res=await fetch("https://myfirssstapinodejs.herokuapp.com/kidsCloth")
-            let data = await res.json()
+            var data = await res.json()
             showData(data);
         }
     
@@ -91,7 +91,7 @@
             showData(data);
         }
         else{
-            var filter = data.filter(({prodcat}) =>{
+            var filter = data.filter(({product_category}) =>{
                 return (prodcat == selected);
             });
             showData(filter);
