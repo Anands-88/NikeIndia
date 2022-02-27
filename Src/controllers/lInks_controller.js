@@ -72,7 +72,7 @@ router.get("/sneakersupcoming",(req,res) =>
 
 router.get("/wishlist",(req,res) =>
 {
-    return res.render("whislist");
+    return res.render("wishlist");
 })
 
 router.get("/women_clothing",(req,res) =>
