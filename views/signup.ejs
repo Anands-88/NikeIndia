@@ -65,10 +65,10 @@
 <script src="/Javascript/signup.js"></script> 
 
 <script type = "module">
-    import navbar from "/Javascript/navbar_html.js"
+    import {navbar,mobile} from "/Javascript/navbar_html.js"
+    mobile()
     let navbar_html =  navbar()
     document.querySelector("#navbar_suraj").innerHTML = navbar_html
-
 
     import footer from "/Javascript/footer.js"
     let footer_html = footer()
