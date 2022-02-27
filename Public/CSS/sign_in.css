@@ -107,7 +107,7 @@
  #togglePassword{
   margin-left: -30px;
   cursor: pointer;
-  transform: translate(160px,-33px);
+  transform: translate(0px,0px);
 }
 
 #password{

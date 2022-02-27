@@ -72,22 +72,22 @@
     let footer_html = footer()
     document.querySelector("#customise_footer").innerHTML = footer_html  
 
-    document.querySelectorAll(".join_us_click").addEventListener("click",() =>
+    document.querySelectorAll(".join_us_click")[0].addEventListener("click",() =>
     {
         window.location.href = "/in/register"
     })
-    document.querySelectorAll(".sign_in_click").addEventListener("click",() =>
+    document.querySelectorAll(".sign_in_click")[0].addEventListener("click",() =>
     {
         window.location.href = "/in/signin"
     })
-    // document.querySelectorAll(".join_us_click")[1].addEventListener("click",() =>
-    // {
-    //     window.location.href = "/in/register"
-    // })
-    // document.querySelectorAll(".sign_in_click")[1].addEventListener("click",() =>
-    // {
-    //     window.location.href = "/in/signin"
-    // })
+    document.querySelectorAll(".join_us_click")[1].addEventListener("click",() =>
+    {
+        window.location.href = "/in/register"
+    })
+    document.querySelectorAll(".sign_in_click")[1].addEventListener("click",() =>
+    {
+        window.location.href = "/in/signin"
+    })
 
 
 </script>

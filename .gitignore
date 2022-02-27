@@ -1,32 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Anands-88 
-Anands-88
-/
-dummy-88
-Private
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-dummy-88/.gitignore
-@Anands-88
-Anands-88 Initial commit
-Latest commit 4123d44 30 seconds ago
- History
- 1 contributor
-104 lines (76 sloc)  1.57 KB
-  
-# Logs
+  # Logs
 logs
 *.log
 npm-debug.log*
