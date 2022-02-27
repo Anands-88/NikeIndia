@@ -1,11 +1,13 @@
  var product = JSON.parse(localStorage.getItem("product"));
  console.log("product data",product)
+
+ showProduct(product);
     var cart_data = JSON.parse(localStorage.getItem("cart")) || [];
             console.log(cart_data);
 
-    var wishlist_data = JSON.parse(localStorage.getItem("wishlist")) || [];
+    var wishlist_data = []
 
-    showProduct(product);
+    // showProduct(product);
 
     function showProduct({catprod, desprod, imageprod, priceprod, titleprod}){
         var body= document.querySelector("#Product_show_main_div");
@@ -65,7 +67,6 @@
             wishlist.id = "product_show_wishlist_button";
             wishlist.addEventListener("click", function(event){
                 event.preventDefault();
-
                 var obj = {
                     prodtitle: titleprod,
                     prodcat: catprod,
@@ -73,9 +74,9 @@
                     prodimg: imageprod,
                     prodprice: priceprod,
                 }
-
                 wishlist_data.push(obj);
                 localStorage.setItem("wishlist", JSON.stringify(wishlist_data));
+                console.log(wishlist_data)
             })
 
         var br = document.createElement("br")
