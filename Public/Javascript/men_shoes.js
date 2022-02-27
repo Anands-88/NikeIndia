@@ -83,4 +83,7 @@ function sort_data(){
 }
 
 
-    
+    //     var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
+    //  function Menpage(){
+    //      window.location.href = "men.html"
+    //  }
