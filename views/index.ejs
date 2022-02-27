@@ -1,0 +1,126 @@
+<%- include("./html", {title: "Nike. Just do It. Nike IN", signLink:"", footer:"/CSS/footer.css"})%>
+<link rel="stylesheet" href="/CSS/index.css">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@900&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script>
+        let message = "<%=message%>"
+          if(message != "[object Object]")
+          {   
+              alert(message)
+          }
+      </script>
+       <div class = "image_content">
+        <div>
+            <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1255,c_limit/558286a5-5ad5-4afd-bcac-a696a30bbcad/nike-just-do-it.png" alt="">
+        </div>
+        <div class = "content">
+            <p>Just In: Fast Pack</p>
+            <b>FIND YOUR FAST</b>
+            <div>
+                <a href="/in/sales">Shop All</a>
+            </div>
+        </div>
+    </div>
+
+    <div class = "image_content">
+        <p>Featured</p>
+        <div>
+            <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_933,c_limit/88759db3-90cc-40e7-86fc-8c89df406bf3/nike-just-do-it.png" alt="">
+        </div>
+       <div class = "content">
+            <p>Flow in Floral Pack</p>
+            <b>ICON CLASH COLLECTION</b>
+            <div>
+                <a href="">Shop</a>
+            </div>
+       </div>
+    </div>
+
+    <div class = "image_content">
+        <p>Trending</p>
+        <div class = "multiple_images">
+           <div id = trend_image_1>
+                <p>Jordan x Paris Saint-German</p>
+                <div>
+                    <a href="">Shop</a>
+                </div> 
+            </div>
+            <div id = trend_image_2>
+                <p>Air Sprung Pack: Live Your Happiness</p>
+                <div>
+                    <a href="">Shop</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class = "image_content">
+        <p>Don't Miss</p>
+        <div>
+            <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_952,c_limit/c73fe635-aa3b-4010-ad7e-584a413545a1/nike-just-do-it.png" alt="">
+        </div>  
+        <div class = "content">
+            <p>Easy On.Easy Go</p>
+            <b>DISCOVER THE NEW DYNAMO GO</b>
+            <p class = "gogo">Helping kids get in the flow, these new kicks are super easy to slide on so kids can go, go, go.</p>
+            <div>
+                <a href="">Shop</a>
+            </div>
+        </div>
+    </div>
+
+    <div class = "image_content">
+        <p>The Latest</p>
+       <div>
+        <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_929,c_limit/5204b0a5-1869-4a8f-b577-cc7017239e46/nike-just-do-it.jpg" alt="">
+       </div> 
+        <div class = "content" id = "bold">
+            <b>FEEL THE LOVE</b>
+            <p>Everlasting Love Pack.</p>
+            <div id = "learn_more">
+                <a href="">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class = "image_content">
+        <p>Just In</p>
+        <div>
+            <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_929,c_limit/027bcc0c-0434-4528-b2f9-67cac01c2709/nike-just-do-it.jpg" alt="">
+        </div>
+        <div class = "content" id = "bold">
+            <b>FLIGHT (HER)ITAGE COLLECTION</b>
+            <p>Experience comfort and copnfidence in powerful design lines and patterns</p>
+           <div>
+            <a href="">Shop</a>
+           </div>
+        </div>
+    </div>
+
+    <div class = "image_content">
+        <p>More Nike</p>
+        <div id = "more_like">
+            <div class = "men">
+                <div class = "gen_button">
+                    <a href="">Men's</a>
+                </div>
+            </div>
+            <div class = "women">
+                <div class = "gen_button">
+                    <a href="">Women's</a>
+                </div>
+            </div>
+            <div class = "kid">
+                <div class = "gen_button">
+                    <a href="">Kids'</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "customise_footer"></div>
+</body>
+</html>
+<script type = "module">
+    import footer from "/Javascript/footer.js"
+    let footer_html = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_html  
+</script>
