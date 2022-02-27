@@ -1,4 +1,4 @@
-<%- include("../html", {title: "Nike. Just do It. Nike IN", signLink:"", footer:"/CSS/footer.css"})%>
+<%- include("./html", {title: "Nike. Just do It. Nike IN", signLink:"", footer:"/CSS/footer.css"})%>
 <link rel="stylesheet" href="/CSS/index.css">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@900&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <script>
@@ -16,7 +16,7 @@
             <p>Just In: Fast Pack</p>
             <b>FIND YOUR FAST</b>
             <div>
-                <a href="">Shop All</a>
+                <a href="/in/sales">Shop All</a>
             </div>
         </div>
     </div>
@@ -122,6 +122,5 @@
 <script type = "module">
     import footer from "/Javascript/footer.js"
     let footer_html = footer()
-    console.log(footer_html)
     document.querySelector("#customise_footer").innerHTML = footer_html  
 </script>

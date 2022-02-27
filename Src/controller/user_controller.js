@@ -9,7 +9,7 @@ router.post("/signin",async(req,res)=> {
     if(req.body.email == "" || req.body.password == "")
     {
         const message = "Please enter email and password"
-        return res.render("Sign_in/signin",{message});
+        return res.render("signin",{message});
     }
     const user = await User.findOne({email:req.body.email}).lean().exec()
     try{
@@ -21,7 +21,7 @@ router.post("/signin",async(req,res)=> {
         else
         {
             const message = "Incorrect Email or password"
-            return res.render("Sign_in/signin",{message});
+            return res.render("signin",{message});
 
         } 
     }
@@ -58,7 +58,6 @@ router.post("/register", body("email").isEmail()
             if(!errors.isEmpty())
             {
                 const message = {}
-                console.log(errors.errors)
                 for(msg of errors.errors)
                 {
                     if(msg.param == "firstname" || msg.param == "lastname")
@@ -67,7 +66,7 @@ router.post("/register", body("email").isEmail()
                     }
                    message[msg.param] = msg.msg
                 }
-                return res.render("Sign_up/signup",{message});
+                return res.render("signup",{message});
             }
             else
             {   
@@ -84,17 +83,17 @@ router.post("/register", body("email").isEmail()
 router.get("/register",(req,res)=>
 {   
     const message = "Registration Page"
-    return res.render("Sign_up/signup.ejs",{message})
+    return res.render("signup.ejs",{message})
 })
 
 router.get("/signin",(req,res)=>
 {   
     const message = "Sign in to visit Home page";
-    return res.render("Sign_in/signin",{message});
+    return res.render("signin",{message});
 })
 router.get("/home",(req,res)=>
 {  
      const message = `${name}, Welcome to home page`
-    return res.render("Home/index",{message});
+    return res.render("index",{message});
 })
 module.exports = router;
