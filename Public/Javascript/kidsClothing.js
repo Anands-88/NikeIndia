@@ -17,7 +17,7 @@ data.map(({product_name, product_image, product_description, product_category, p
        div.addEventListener("click", function(event){
            var obj = {
                titleprod: product_name,
-               imageprod:product_image[0],
+               imageprod:product_image,
                desprod: product_description,
                catprod: product_category,
                priceprod: product_price

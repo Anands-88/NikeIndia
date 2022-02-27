@@ -60,7 +60,7 @@ router.get("/sneakers",(req,res) =>
     return res.render("sneakersfeed");
 })
 
-router.get("/sneaksinstock",(req,res) =>
+router.get("/sneakersinstock",(req,res) =>
 {
     return res.render("sneakersinstock");
 })
@@ -90,6 +90,10 @@ router.get("/women_shoes",(req,res) =>
     return res.render("women_shoes");
 })
 
+router.get("/checkout",(req,res) =>
+{
+    return res.render("checkout");
+})
 
 router.get("/sales",(req,res) =>
 {

@@ -93,6 +93,10 @@ router.get("/signin",(req,res)=>
 })
 router.get("/home",(req,res)=>
 {  
+    if(name == undefined)
+    {
+        name = "HELLO"
+    }
      const message = `${name}, Welcome to home page`
     return res.render("index",{message});
 })

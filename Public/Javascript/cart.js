@@ -77,7 +77,7 @@ document.getElementById("cart-checkout").addEventListener("click",toCheckOutPage
 
 
 function toCheckOutPage(){
-  window.location.href = "/Pages/checkout.html"
+  window.location.href = "/in/checkout"
 }
 
 

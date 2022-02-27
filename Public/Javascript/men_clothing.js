@@ -1,9 +1,10 @@
 shownews()
 async function shownews(){
  let res = await fetch ("https://myfirssstapinodejs.herokuapp.com/menCloth")
+ console.log("result",res)
  let data = await res.json();
 
- console.log(data)
+ console.log("data",data)
  appenddata(data)
  
 //   console.log(res)
@@ -42,7 +43,7 @@ title.style.marginLeft = "10px";
 
 var price = document.createElement("p");
 price.innerText = "₹ "+product_price;
-price.style.marginLeft = "10px";
+// price.style.marginLeft = "10px";
 
 div.append(image, title, price)
 

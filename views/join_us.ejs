@@ -10,7 +10,7 @@
         <p>Nike Membership</p>
     </div>
     <div id = "join_us">
-        <img src="https://i2.paste.pics/4812ed74a9a53f53b83c4e930f925917.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+        <img src="https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/560879ab-24f8-4013-ac94-6661849cdf3c/image.jpg " alt="">
     </div>
     <div id = "join_us_content">
         <div>Where All Athletes Belong</div>
@@ -31,7 +31,7 @@
 
     <div class = "nike_image">
         <p>Don't Miss</p>
-        <img src="https://i2.paste.pics/8929feae10cce8197d29324646f493b1.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+        <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1700,c_limit/7c029d74-8aff-4130-a563-82ee67282c66/nike-membership.jpg " alt="">
     </div>
     <div id = "hello_app_content">
         <h1>YOUR NIKE CONNECTION</h1>
@@ -40,18 +40,18 @@
     </div>
     <div class = "nike_image">
         <p>First Access</p>
-        <img src="https://i2.paste.pics/2fa26b5b6f3e09b200577e045ce45089.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+        <img src="https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/d1242a08-b6b1-4b13-8cf4-544fc9517a5c/nike-membership.jpg " alt="">
     </div>
     <div class = "nike_image">
         <p>Member Rewards</p>
-        <img src="https://i2.paste.pics/d5a9489b22721fbae5fbcd30c5b635ec.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+        <img src="https://cf-images.us-east-1.prod.boltdns.net/v1/jit/72451143001/bdd442d9-e5fc-4e3f-8710-962c9b4ef6ff/main/1808x700/2s176ms/match/image.jpg " alt="">
     </div>
     <div class = "nike_image">
         <p>Shopping As It Should Be</p>
-        <img src="https://i2.paste.pics/97c8fa85a4d2c81771a9777e84e3a325.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+        <img src="https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/bfc8265d-4193-4f70-8a0c-f9776b197512/nike-membership.jpg " alt="">
     </div>
     <div id = "athletes">
-        <img src="https://i2.paste.pics/b3150c79ffddcac90bf55092b2afa7cb.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+        <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1700,c_limit/b0ec2a73-dcb3-456b-b2b7-9bb62374ac62/nike-membership.png" alt="">
         <div>
             <button class = "join_us_click" >Join Us</button>
             <button class = "sign_in_click" >Sign-In</button>
@@ -63,31 +63,31 @@
 
 <script type = "module">
     import {navbar,mobile} from "/Javascript/navbar_html.js"
-    mobile()
     let navbar_html =  navbar()
     document.querySelector("#navbar_suraj").innerHTML = navbar_html
+    mobile()
 
 
     import footer from "/Javascript/footer.js"
     let footer_html = footer()
     document.querySelector("#customise_footer").innerHTML = footer_html  
 
-    document.querySelectorAll(".join_us_click")[0].addEventListener("click",() =>
+    document.querySelectorAll(".join_us_click").addEventListener("click",() =>
     {
         window.location.href = "/in/register"
     })
-    document.querySelectorAll(".sign_in_click")[0].addEventListener("click",() =>
+    document.querySelectorAll(".sign_in_click").addEventListener("click",() =>
     {
         window.location.href = "/in/signin"
     })
-    document.querySelectorAll(".join_us_click")[1].addEventListener("click",() =>
-    {
-        window.location.href = "/in/register"
-    })
-    document.querySelectorAll(".sign_in_click")[1].addEventListener("click",() =>
-    {
-        window.location.href = "/in/signin"
-    })
+    // document.querySelectorAll(".join_us_click")[1].addEventListener("click",() =>
+    // {
+    //     window.location.href = "/in/register"
+    // })
+    // document.querySelectorAll(".sign_in_click")[1].addEventListener("click",() =>
+    // {
+    //     window.location.href = "/in/signin"
+    // })
 
 
 </script>
