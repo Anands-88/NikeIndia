@@ -34,7 +34,7 @@ async function shownews(){
 
                    localStorage.setItem("product", JSON.stringify(obj));
 
-                   window.location.href = "product_show.html";
+                   window.location.href = "/in/product_show";
                });
                    
                    var image  = document.createElement("img");

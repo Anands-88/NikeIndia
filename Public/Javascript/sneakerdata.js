@@ -106,11 +106,11 @@ function sneakerUpcoming(data) {
 // }
 
 function InStockPage() {
-  window.location.href = "sneakersinstock.html";
+  window.location.href = "/in/sneakersinstock";
 }
 function FeedPage() {
-  window.location.href = "sneakersfeed.html";
+  window.location.href = "/in/sneakers";
 }
 function UpcomingPage() {
-  window.location.href = "sneakersupcoming.html";
+  window.location.href = "/in/sneakersupcoming";
 }

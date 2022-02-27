@@ -29,7 +29,7 @@ function appenddata(data){
 
                 localStorage.setItem("product", JSON.stringify(obj));
 
-                window.location.href = "product_show.html";
+                window.location.href = "/in/product_show";
             });
 
 var image  = document.createElement("img");
@@ -85,8 +85,4 @@ function fiter_data(){
        }
 
 
-       var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
-    function Menpage(){
-        window.location.href = "men.html"
-    }
-
+  

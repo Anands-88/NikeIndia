@@ -29,7 +29,7 @@ data.map(({product_name, product_image, product_description, product_category, p
 
            localStorage.setItem("product", JSON.stringify(obj));
 
-           window.location.href = "product_show.html";
+           window.location.href = "/in/product_show";
        });
            
            var image  = document.createElement("img");

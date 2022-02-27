@@ -137,7 +137,7 @@ function getdata(product,location) // funtion to add data to particular element,
     
             localStorage.setItem("product", JSON.stringify(obj)); // Setting to local storage
     
-            window.location.href = "product_show.html"; // Moving Next page
+            window.location.href = "/in/product_show"; // Moving Next page
         });
 
         let image_box = document.createElement("div"); // Image box
