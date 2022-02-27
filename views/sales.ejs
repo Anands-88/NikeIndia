@@ -39,8 +39,13 @@
 <script src="/Javascript/sales.js"></script>
 
 <script type ="module">
+    
+    import {navbar,mobile} from "/Javascript/navbar_html.js"
+    mobile()
+    let navbar_html =  navbar()
+    document.querySelector("#navbar_suraj").innerHTML = navbar_html
 
-import footer from "/Javascript/footer.js"
+    import footer from "/Javascript/footer.js"
     let footer_html = footer()
     document.querySelector("#customise_footer").innerHTML = footer_html  
 
