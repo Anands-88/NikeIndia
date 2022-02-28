@@ -5,11 +5,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@900&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <script>
         let message = "<%=message%>"
-          if(message != "[object Object]" || message != undefined)
-          {   
-            console.log(message);
+    
+        if(message != "[object Object]" && message != undefined && message != "Welcome to Nike India")
+        {   
             localStorage.setItem("login_User", message);
-          }
+        }
+        else if(message == "Welcome to Nike India")
+        {
+            alert(message)
+        }
           
       </script>
       <div id="navbar_suraj"></div>

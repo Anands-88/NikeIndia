@@ -15,6 +15,8 @@ const sneakersInStockController = require("./controllers/sneakersInStock.control
 const cartController = require("./controllers/cart.controller")
 const userController = require("./controllers/user_controller")
 const linksController = require("./controllers/lInks_controller")
+
+const home = require("./controllers/home_controller")
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -27,6 +29,7 @@ app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use("",home)
 app.use("/in",userController)
 app.use("/in",linksController)
 app.use("/menShoes",menshoesController) 

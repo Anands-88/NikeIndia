@@ -56,7 +56,6 @@ function mobile()
         logout.innerHTML = null;
 
     if(user != "HELLO"){
-        console.log(user);
 
         userName.textContent = `Hi! ${user}`;
 
