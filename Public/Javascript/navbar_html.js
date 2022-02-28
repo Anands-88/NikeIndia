@@ -55,7 +55,7 @@ function mobile()
     var logout = document.querySelector("#sign_in_nav_bar");
         logout.innerHTML = null;
 
-    if(user != "HELLO" && user != null){
+    if(user != "HELLO"){
 
         userName.textContent = `Hi! ${user}`;
 

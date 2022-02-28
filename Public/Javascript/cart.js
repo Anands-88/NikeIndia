@@ -73,7 +73,7 @@ function removeitem(index){
   
 }
 
-document.getElementById("checkoutbut").addEventListener("click",toCheckOutPage)
+document.getElementById("cart-checkout").addEventListener("click",toCheckOutPage)
 
 
 function toCheckOutPage(){
