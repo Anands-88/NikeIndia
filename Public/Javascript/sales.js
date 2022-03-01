@@ -25,11 +25,12 @@ sort_price() // calling sort_price to open sort section
     {   
         document.querySelector("#sort_arrow").addEventListener("click",() => // event listner
         {
-            event.target.style.transform = "translate(-15px,30px) rotate(270deg)" // making arrow upwards
+            event.target.style.transform = "translate(-15px,25px) rotate(270deg)" // making arrow upwards
 
             document.querySelector("#sale_sorting_list").innerHTML = ""; // content inside sort section
             let low = document.createElement("h6")
             low.textContent = "Price: Low to High"; // Putting contents
+            low.style.marginTop = "25px"
             let high = document.createElement("h6")
             high.textContent = "Price: High to Low";
             
@@ -38,10 +39,9 @@ sort_price() // calling sort_price to open sort section
             document.querySelector("#sale_sorting_list").style.cssText =  // styles to sort body
             `background:white;
             width:130px;
-            position: fixed;
-            top:78px;
+            border:1px solid grey;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);`;
-        
+    
 
             document.querySelector("#sale_sorting_list").addEventListener("click",() => // event listner to sort body
             {
@@ -65,8 +65,9 @@ sort_price() // calling sort_price to open sort section
 
             document.querySelector("#sort_arrow").addEventListener("click",() => // make arrow downwards upon clicking second time
             {
-                event.target.style.transform = "translateY(35px) rotate(90deg)"; // changing arrow direction
+                event.target.style.transform = "translate(-10px ,28px) rotate(90deg)"; // changing arrow direction
                 document.querySelector("#sale_sorting_list").style.display = "none"; // not displaying upon second click
+                document.querySelector("#sale_products").style.marginTop = "-50px"
                 sort_price() //  calling again the function so returns to normal
             })
         })

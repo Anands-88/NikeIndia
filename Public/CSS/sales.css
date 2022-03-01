@@ -9,8 +9,8 @@ body {
     margin: 0% 3% 2% 3%;
     font-size: 20px;
     position: sticky;
-    top: 0;
     background-color: white;
+    top: 0;
   }
   
   #sale_topbar > div {
@@ -34,7 +34,7 @@ body {
   #filter_sec > img {
     width: 25px;
     height: 25px;
-    transform: translate(5px, 27px);
+    transform: translate(5px, 20px);
     cursor: pointer;
   }
   
@@ -45,18 +45,18 @@ body {
   #sort_arrow {
     width: 20px;
     height: 25px;
-    transform: translateY(35px) rotate(90deg);
+    transform: translate(-10px,28px) rotate(90deg);
     cursor: pointer;
   }
   
   #sale_sorting_list {
     margin-left: 86%;
-    position: absolute;
-    top: 240px;
+    position: sticky;
+    top: 85px;
     font-size: 20px;
     height: 80px;
-    transform: translateY(-20px);
     text-align: center;
+    transform: translateY(-30px);
   }
   
   #sale_sorting_list > h6 {
@@ -76,6 +76,7 @@ body {
     justify-content: space-around;
     grid-row-gap: 1%;
     margin: auto;
+    margin-top:-100px;
     margin-bottom: 10%;
   }
   

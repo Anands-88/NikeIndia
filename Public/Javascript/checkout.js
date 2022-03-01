@@ -11,9 +11,9 @@
         order_month = today_date.getMonth()+2;
     }
 
-    console.log(order_date, order_month,today_date.getFullYear());
+    // console.log(order_date, order_month,today_date.getFullYear());
 
-    document.querySelector("#you_will_recice_order_on").textContent = "Your Order Will Be delivered till :- "+(order_date+" "+order_month+" "+today_date.getFullYear());
+    document.querySelector("#you_will_recice_order_on").textContent = `Your Order Will Be delivered till :- ${order_date}/${order_month}/${ today_date.getFullYear()}`;
 
 
 
@@ -33,8 +33,8 @@
     document.querySelector("#show_total_amount_to_pay").textContent = "₹ "+(tax+amount);
     document.querySelector("#show_order_user_total_amount").textContent = "₹ "+(tax+amount);
 
-    console.log("Cart Amount: "+amount);
-    console.log("tax: "+Math.floor((amount*12)/100));
+    // console.log("Cart Amount: "+amount);
+    // console.log("tax: "+Math.floor((amount*12)/100));
     
 
     function addDetails(){
@@ -73,9 +73,11 @@
             alert("Payment Processing");
 
             document.querySelector("#show_order_user_name").textContent = userdata.name;
+            console.log(userdata.name,userdata)
             document.querySelector("#show_order_user_address").textContent = userdata.address;
 
             setTimeout(()=>{
+                console.log("HELLO")
                 payment.style.display = "none";
                 alert("Payment Recived...Order Placed.")
                 order.style.display = "block";

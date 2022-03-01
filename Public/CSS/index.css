@@ -35,8 +35,8 @@
 {
     width:95px;
     background: black;
-    height: 33px;
-    padding:3px;
+    height: 25px;
+    padding-top:8px;
     border-radius: 20px;
     margin: auto;
     margin-top: 4%;
@@ -99,12 +99,12 @@
 #trend_image_1 > div, #trend_image_2 > div
 {
     width:80px;
-    height:33px;
+    height:24px;
     background-color: black;
     color:white;
     border-radius: 20px;
     margin:3% 0 0 12%;
-    padding:1px;
+    padding-top:8px;
 }
 
 #trend_image_2 > div
@@ -168,8 +168,8 @@
 .gen_button
 {
     width:80px;
-    height:33px;
-    padding: 1px;
+    height:26px;
+    padding-top: 7px;
     background-color: white;
     border-radius: 18px;
     margin: 105% 0 0 15%;

@@ -60,6 +60,7 @@
                 }
                 cart_data.push(obj);
                 localStorage.setItem("cart", JSON.stringify(cart_data));
+                window.location.href = "/in/cart"
             })
 
         var wishlist = document.createElement("button");
@@ -67,6 +68,8 @@
             wishlist.id = "product_show_wishlist_button";
             wishlist.addEventListener("click", function(event){
                 event.preventDefault();
+                wishlist.style.background = "black";
+                wishlist.style.color = "white"
                 var obj = {
                     prodtitle: titleprod,
                     prodcat: catprod,
@@ -76,7 +79,7 @@
                 }
                 wishlist_data.push(obj);
                 localStorage.setItem("wishlist", JSON.stringify(wishlist_data));
-                console.log(wishlist_data)
+                window.location.href = "/in/wishlist"
             })
 
         var br = document.createElement("br")

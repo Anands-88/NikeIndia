@@ -1,6 +1,5 @@
 
    var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-       console.log(wishlist)
    //     showdata(wishlist)
    showdata(wishlist)
    
