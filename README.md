@@ -5,7 +5,7 @@
   In this project, we made a clone of nike India website where you can purchase sports wear of every category. Although we made clone of this site earlier [ https://github.com/Deepu2560/Nike ], Special about this is we used Backend technologies like Node.js, Express.js and MongoDB.
 <hr/> 
 
-## <kbd>Features :-</kbd>
+ ## Features :-
 <br/>
 
 - ### Signup and Signin with validation and  Toggle Password
