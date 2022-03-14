@@ -1,6 +1,8 @@
 # Nike India Clone
 
-Hello everyone, In this project, we made a clone of nike India website where you can purchase sports wear of every category. Although we made clone of this site earlier [ https://github.com/Deepu2560/Nike ], Special about this is we used Backend technologies like Node.js, Express.js and MongoDB.
+### Hello everyone 👋, 
+    
+  In this project, we made a clone of nike India website where you can purchase sports wear of every category. Although we made clone of this site earlier [ https://github.com/Deepu2560/Nike ], Special about this is we used Backend technologies like Node.js, Express.js and MongoDB.
 <hr/> 
 
 ## <kbd>Features :-</kbd>
@@ -8,7 +10,7 @@ Hello everyone, In this project, we made a clone of nike India website where you
 
 - ### Signup and Signin with validation and  Toggle Password
 
-<img src="https://i2.paste.pics/4af12a5f758001de68e1d083229fb773.png?trs=022a7adf555a453961a398f3783c035b9f815b0344ce7729df7daa70d1074dc8"/>
+<img src="https://i2.paste.pics/fe1ab9ba40f7466587b5ffb9bd9ed073.png?trs=022a7adf555a453961a398f3783c035b9f815b0344ce7729df7daa70d1074dc8"/>
 
 <br/>
 
@@ -46,7 +48,7 @@ Hello everyone, In this project, we made a clone of nike India website where you
 To make this Project, We used Frontend technologies <kbd> HTML CSS JAVASCRIPT</kbd>
 and Backend Technologies<KBD>EJS</kbd>(Embedded JavaScript) <kbd>Node.Js Express.Js </kbd> and Database as <kbd>MongoDB</kbd>.
 
-And also We deployed this in <kbd>Heroku</kbd>. Check it once 😊
+And also We deployed 🚀 this in <kbd>Heroku</kbd>. Check it once 😊
 
 ```bash
   https://nike-in-masai-project.herokuapp.com/
