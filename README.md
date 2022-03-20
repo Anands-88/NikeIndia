@@ -10,7 +10,7 @@
 
 - ### Signup and Signin with validation and  Toggle Password
 
-<img src="https://i2.paste.pics/fe1ab9ba40f7466587b5ffb9bd9ed073.png?trs=022a7adf555a453961a398f3783c035b9f815b0344ce7729df7daa70d1074dc8"/>
+<img src="./images/signin.png"/>
 
 <br/>
 
@@ -18,7 +18,7 @@
 
 - ### Filter features - Filter by category <kbd>Men women kids Cloths & Shoes</kbd>
 
-<img src="https://i2.paste.pics/65421affc019a161ea9a82352f59fcfe.png?trs=022a7adf555a453961a398f3783c035b9f815b0344ce7729df7daa70d1074dc8"/>
+<img src="./images/sales.png"/>
 
 <br/>
 <hr/> 
@@ -92,7 +92,7 @@ And also We deployed 🚀 this in <kbd>Heroku</kbd>. Check it once 😊
 
 ### Home Page
 
-<img src="https://i2.paste.pics/e031ee949f4c7c803f3053006f797fc7.png?trs=022a7adf555a453961a398f3783c035b9f815b0344ce7729df7daa70d1074dc8"/>
+<img src="./images/home.png"/>
 
 #### * Everyone contributed to make Home Page.
 <br/>
